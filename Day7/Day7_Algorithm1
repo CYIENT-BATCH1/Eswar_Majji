@@ -1,0 +1,6 @@
+//Write a program to convert a data stream from Little Endian to Big Endian (you can take any 8 bit value or use 0b110101110)?
+Algorithm
+-> read number and consider 1 byte
+-> extract least 4 bits and lest shift 4 times
+-> then extract 4 bits from MSB side and right shit 4 times 
+-> and add both numbers 
