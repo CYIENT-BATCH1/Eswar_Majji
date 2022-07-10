@@ -1,22 +1,20 @@
 //Coded by Eswar Majji(69324)
-
-//Write a program to calculate the sum of the first and the second last digit of a 5-digit number entered from the keyboard.
+//Write a program to reverse a 3-digit number which is entered from keyboard.
 #include <stdio.h>
 int main()
 {
-	int num, num2, sum = 0;
-	printf("Enter 5 digit number :");
+	int num, rem = 0,rev = 0;
+	printf("Enter number");
+	//read number
 	fflush(stdout);
 	scanf("%d", &num);
-
-	for(int i = 0; i < 5; i++)
+	//reversing number
+	while(num != 0)
 	{
-		num2 = num % 10;
-		if((i== 1) || (i == 4))
-		{
-			sum = sum + num2;
-		}
+		rem = num % 10;
+		rev = (rev*10) + rem;
 		num = num / 10;
 	}
-	printf("sum is %d", sum);
+	printf("reversed number is %d",rev);
+
 }
