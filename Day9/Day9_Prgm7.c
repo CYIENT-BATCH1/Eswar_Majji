@@ -2,9 +2,9 @@
  * Id : em69324
  *
  *
-I). Write program to set (1) bits CIS, C2OUT, C1OUT in register “CMCON” if bits CHS3, CHS2, CHS1 bits are
-set to 0x06 in register “ADCON0”
+I). Set the register SSPSTAT value such a way that bit CKE, P and S bit are cleared (0), without disturbing the other bits.
 
+II). Find out the value of UA, BF, SMP bits in SSPSTAT register if the value of the register is 0x55
  *
  *
  */
