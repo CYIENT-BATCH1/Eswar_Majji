@@ -1,0 +1,12 @@
+Write a program in C to sort an array using Pointer. The sample output must be as below
+Algorithm
+-> initialize pointer to an array 
+-> read size 
+-> allocate memory 
+-> read elements to an array
+-> point i to 0 index element j to 1 index element
+-> compare two elements like 
+-> if condition true swap elements
+-> increament j 
+-> compare again i with j until j reaches to size
+-> increatment i until i reaches size
