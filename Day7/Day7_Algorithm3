@@ -1,0 +1,8 @@
+Write program to clear(0) bits CIS, CM2, CM1, CM0 in register “CMCON” if bits CHS3, CHS2, CHS1, CHS0 bits are set to 0x07 in register “ADCON0”
+
+
+Algorithm
+->Read register “CMCON”
+->Read register “ADCON0”
+->chech 5 4 3 2 bits of register “ADCON0”are equivlent to 7 or not
+-> if equal clear(0) bits CIS, CM2, CM1, CM0 in register “CMCON”
