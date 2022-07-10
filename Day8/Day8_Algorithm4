@@ -1,0 +1,12 @@
+Realize a function which has 2 arguments and 1 return value. Argument 1 is Byte value, Argument 2 is bit position.
+Function has to flip the bit position (as per argument 2) in argument 1 byte value and return complete byte value.
+
+Algorithm 
+-> read number and considering byte
+-> read bit position 
+-> check whether entered number is less than 256 or not
+-> if condition true
+  -> call function with byte num and bit position as arguments
+    -> using character pointer taking byte of num 
+    -> toggle the bit
+-> retrun the flipped number
