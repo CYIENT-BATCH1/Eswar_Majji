@@ -1,0 +1,8 @@
+We'll say a number is special if it is a multiple of 11 or if it is one more than a multiple of 11.
+Print “SPECIAL” if the given non-negative number is special. Use the % "mod" operator.
+Algorithm
+-> start
+-> read number from user.
+-> check num is divisible by 11 or one more than a multiple of 11
+-> if condition true print "SPECIAL".
+-> end
