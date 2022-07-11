@@ -1,0 +1,11 @@
+8. I). Write program to set (1) bits CIS, C2OUT, C1OUT in register “CMCON” 
+if bits CHS3, CHS2, CHS1 bits are set to 0x06 in register “ADCON0”
+
+Algorithm
+-> Read register “ADCON0”
+-> check register “ADCON0” is equal to 0x06
+    -> if it is equal 
+    -> read register “CMCON”
+    -> arrange the 3 7 6 bits of register “CMCON” in the following order
+    -> and set those bit position
+-> print that value
