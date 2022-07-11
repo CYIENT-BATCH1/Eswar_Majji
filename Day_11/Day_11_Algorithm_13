@@ -1,0 +1,21 @@
+13. Write a program to do binary search in a sorted array. 
+Program should take input of sorted values and search value. (Make number of elements as configurable value)
+
+How binary search works is explained below.
+
+Sudo code
+-> read the size of the array
+-> intialize array with given size
+-> read elements in sorted order
+-> read number to search  
+-> take three variables low, high and mid
+-> low = 0, high = (size - 1), mid = (low + high ) / 2
+-> check mid == serach num if true return 
+-> else if check search num is less than mid or not
+    -> if true
+        -> go to left part means high = mid - 1
+        -> and repeat above steps until mid == search num
+    -> else 
+        -> go to right position means low = mid + 1
+        -> reapeat the above steps until mid == search num
+-> return 0
