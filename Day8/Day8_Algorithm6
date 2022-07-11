@@ -1,0 +1,13 @@
+Set the register T0CON value such a way that bit TMR0ON and PSA bit are set (1), 
+without disturbing the other bits.
+
+II). Find out the value of T0PS2, T0PS1, T0PS0 bits in T0CON register if the value of the register is 0xF3
+
+Algorithm
+-> Read Tcon register
+-> copy that register to another variable
+-> set bits at 3rd and 7th bit position
+-> check copied variable is equal to 0xF3 or not
+    -> if equal 
+    -> find out equavlent value of 2 1 0 bits position
+-> print that value
