@@ -1,0 +1,41 @@
+
+Requirement 1:
+
+Acceleration sensor data is captured in a 2-dimension array as “Sensor_Values[Timestamp_Value][ Sensor_Data]”.
+
+Time stamp interval = 10 ms incremental
+
+Number of data samples = 20 (20 time stamp samples, 20 data samples)
+
+The Sensor_Data is considered as noise if values is < 0x05 and > 0xF0.
+
+Output 1 : Print the time stamp where data is coming as noise.
+
+Output 2 : Delete the noise data and write valid sensor values to new 2-dimension array 
+“Sensor_noNoice_Vlaue[Timestamp_Value][Sensor_Data]” and print them – timestamp and values.
+
+
+Requirement 2:
+
+Along with the “Requirement 1”, The Sensor_Values are considered as malfunction/corrupted if data is either 0xFF, 0x00 continuously for 3 samples.
+
+Output 1 : Print the time stamps where data is coming as malfunction/corrupted.
+
+Output 2 : Delete the malfunction/corrupted data samples and write valid sensor values to 
+new 2-dimension array “Sensor_Final_Vlaue[Timestamp_Value][ Sensor_Data]” and print them – timestamp and values.
+
+Algorithm 
+Requirement 1 :
+-> initialize 2d arrays with given data globally
+-> print 2d array time stramp in decimal and data in hexa decimal
+-> print Noise table lesser than 0x05 and greater than 0xF0
+-> print No Noise table greater than 0x05 and less than 0xF0
+-> assign remaining data into an separate array
+
+Requirement 2 :
+-> printf time stamps where data is coming as malfunction/corrupted
+-> if 0x00 or 0xFF are continously gets 3 times 
+    -> remove that malfunction data
+    -> assign remaining data into separate array
+
+
