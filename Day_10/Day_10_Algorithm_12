@@ -1,0 +1,20 @@
+12. Write a program to Implement ”Selection Sort” using Recursion for given elements 
+(Number elements will vary, so make it as configurable item)
+How Selection sort works is explained below.
+
+
+Algorithm
+-> read the array size
+-> intialize array with given size
+-> read array elements
+-> call the function and pass the array
+-> function definition 
+    -> check two elements if both are in ascending(ex i and j ) 
+    -> if true 
+        -> increament j and call function again
+    -> else
+        -> swap elements and increament j
+        -> and call function again
+    -> repeat above steps untill j reaches to size-1 
+-> repeat the above function definition until i reaches to size - 1
+
