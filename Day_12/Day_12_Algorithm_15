@@ -1,0 +1,19 @@
+15. Find empty strings in an array of strings (Array of strings will be given as input to program) and 
+print the position of array where empty string is present.
+And replace the empty string array element as “CYIENT”
+
+
+
+reasons for using 0 as empty string :
+-> we can read string by using selective scanf , gets and getc 
+-> but while using scanf we cannot enter empty string
+-> when gets is used we can not get expected output  in  all compilers
+->  using getc is not proper way
+-> so , i am taking here 0 as empty string
+Algorithm
+-> initialize 2d array
+-> read string (take 0 as empty string)
+-> check each string == 0
+    -> if equal
+    -> replace with CYIENT
+-> repeat above three steps untill NULL character
