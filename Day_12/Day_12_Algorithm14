@@ -1,0 +1,10 @@
+14 .Find common elements in three sorted arrays, 3 array values are given as input to program.
+
+Algorithm
+
+-> read tree array size
+-> read three array elements
+-> compare 1st element of 1st array with 1st element of 2nd array and 1st element of 3rd array
+-> if equal print element
+-> reapeat the above two steps for every element of each array 
+-> by using 3 layer nested for loop
