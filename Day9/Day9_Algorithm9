@@ -1,0 +1,16 @@
+9. Assume that we have a car with 8 seats, and we are monitoring 8 seat belt status in a variable 
+“G_Msg_switchstatus_Byte[]” as shown in pic1. Each switch status is combination of 2 bits as shown in pic2.
+
+Write status of switches into variable “G_Msg_switchstatus_Byte[]” as below.
+
+SWITCH1, SWITCH7 status is “faulty type 1 in switch”, 
+SWITCH2, SWITCH5 status is ”switch unbuckle”, 
+SWITCH3, SWITCH6 status is “switch buckle”, 
+SWITCH4, SWITCH0 status is “faulty type 2 in switch” without disturbing the other bits.
+
+-> Display the options
+-> read the choice
+    -> if user selects i
+    -> set the switch j bits in register p and set the switch k bits in register q
+    -> repeat the above steps until user wants to exit the loop
+-> use bitwise operations to set bits
