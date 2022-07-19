@@ -1,0 +1,20 @@
+Requirement 1:
+
+Acceleration sensor data is captured in a 2-dimension array as “ Sensor_Values[ Timestamp_Value][ Sensor _Data]”.
+Time stamp interval = 10 ms incremental
+Number of data samples = 20 (20 time stamp samples, 20 data samples)
+The Sensor_Data is considered as noise if values is < 0x05 and > 0xF0.
+Output 1 : Print the time stamp where data is coming as noise.
+Output 2 : Delete the noise data and write valid sensor values to new 2-dimension array “ Sensor_noNoice_Value[ Timestamp_Value][ Sensor _Data]” and 
+print them – timestamp and values.
+
+Algorithm :
+
+
+->initialize Sensor_Values[ 20[ Sensor _Data]
+-> read elements to Sensor_Values[ Timestamp_Value][ Sensor _Data] array
+-> check data at each time stamp 
+-> if the data is less than 0x05 or greater than 0xF0 then print that noise data
+-> and making noise data 0s after printing
+-> and assign the non zero values in Sensor_Values[ Timestamp_Value][ Sensor _Data] to Sensor_noNoice_Value[ Timestamp_Value][ Sensor _Data]
+-> and print the Sensor_noNoice_Value[ Timestamp_Value][ Sensor _Data] array data
