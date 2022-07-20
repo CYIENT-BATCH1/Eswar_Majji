@@ -1,0 +1,21 @@
+
+Requirement 2:
+
+Along with the “Requirement 1”, The Sensor_Values are considered as malfunction/corrupted if data is either 0xFF, 0x00 continuously for 3 samples.
+Output 1 : Print the time stamps where data is coming as malfunction/corrupted.
+Output 2 : Delete the malfunction/corrupted data samples and write valid sensor values to new 2-dimension array “ Sensor_Final_Value[ Timestamp_Value][ Sensor _Data]”
+and print them – timestamp and values.
+
+Algorithm :
+-> initialise the two array Sensor_Values[ Timestamp_Value][ Sensor _Data] and “ Sensor_Final_Value[ Timestamp_Value][ Sensor _Data]
+-> read the elements into Sensor_Values[ Timestamp_Value][ Sensor _Data]
+-> -> check data at each time stamp 
+-> if the data is less than 0x05 or greater than 0xF0 then print that noise data
+-> and making noise data 0s after printing
+-> and assign the non zero values in Sensor_Values[ Timestamp_Value][ Sensor _Data] to Sensor_noNoice_Value[ Timestamp_Value][ Sensor _Data]
+-> and print the Sensor_noNoice_Value[ Timestamp_Value][ Sensor _Data] array data
+-> check each data in the array  if data is either 0xFF, 0x00 .
+-> mark the data using flag and increament count
+-> if count == 3  and previous data is also same then make those data 0
+-> copy the data into  Sensor_Final_Value[ Timestamp_Value][ Sensor _Data]
+ 
