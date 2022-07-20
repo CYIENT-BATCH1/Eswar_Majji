@@ -1,0 +1,43 @@
+
+Problem 2
+Algorithm
+for 11 bit identifier
+-> initialize array pointer, and int variable
+-> read no of message id's
+-> check if no of message id's are less than 0x7FF 
+	-> if false no 0f message id's = 0x7FF
+-> allocate memory for given no of id's using malloc
+-> read the id's into array from user
+-> call function to identify the  arbitration winner
+-> check if there is 0x0 value in array 
+	-> if there is only single 0x0 then return that element 
+	-> else if there are more than one 0x0 then return no winner
+	-> else
+		1.check the id is not equal to 0b1111111111111111
+		2. take 11th bit and check it is 1 or not for 1st id
+		3. if it is 1 make all bits of that id 1s
+		4. repeat the above step for all ids
+		5. assign the id to arbitration winner
+		6. Repeat above 5 steps until 0th bit
+-> return arbitration winner to main function
+
+
+for 29 bit identifier
+-> initialize array pointer, and int variable
+-> read no of message id's
+-> check if no of message id's are less than 0x1FFFFFFF
+	-> if false no 0f message id's = 0x1FFFFFFF
+-> allocate memory for given no of id's using malloc
+-> read the id's into array from user
+-> call function to identify the  arbitration winner
+-> check if there is 0x0 value in array 
+	-> if there is only single 0x0 then return that element 
+	-> else if there are more than one 0x0 then return no winner
+	-> else
+		1.check the id is not equal to 0b1111111111111111
+		2. take 28th bit and check it is 1 or not for 1st id
+		3. if it is 1 make all bits of that id 1s
+		4. repeat the above step for all ids
+		5. assign the id to arbitration winner
+		6. Repeat above 5 steps until 0th bit
+-> return arbitration winner to main function
