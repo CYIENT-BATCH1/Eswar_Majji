@@ -8,7 +8,7 @@
 int count_0;
 //function definition
 
-int CAN_arbitration(int* id_messages, int no_of_messages)
+int CAN_arbitration(int* id_messages, int no_of_messages, int n)
 {
 	int num = 0;
 	int count = 0;
@@ -29,7 +29,7 @@ int CAN_arbitration(int* id_messages, int no_of_messages)
         return 0;
     }
     //lopping to check each bit
-	for(int i = 3; i >= 0; i--)
+	for(int i = n; i >= 0; i--)
 	{
 		num = num | 1 << i;//shifting  1 to ith position
         //checking each id at ith position
@@ -71,13 +71,14 @@ int main()
         scanf("%d", &choice);
         if(choice == 1)
         {
+		int n = 10;
 	        //reading no of messages
 	        printf("Enter no of Messages : ");
 	        fflush(stdout);
 	        scanf("%d", &no_of_messages);
 	        //checking no of messages are less than 0x7FF or not
 	        if(no_of_messages > 2047)
-    	    {
+    	    	{
 	    	    printf("You Entered greater than 0x7FF and we considering only 0x7FF messages");
 		        no_of_messages = 0x7FF;
 	        }
@@ -93,7 +94,7 @@ int main()
 	        }
 	        //calling function to find arbitration winner
 
-	        arbitration_winner = CAN_arbitration(id_messages, no_of_messages);
+	        arbitration_winner = CAN_arbitration(id_messages, no_of_messages, n);
             if(arbitration_winner != 0)
             {
 	            printf("arbitration_winner : 0x%X", arbitration_winner);
@@ -112,6 +113,7 @@ int main()
         }
         else if (choice == 2)
         {
+		int n = 28;
 	        //reading no of messages
 	        printf("Enter no of Messages : ");
 	        fflush(stdout);
@@ -134,7 +136,7 @@ int main()
 	        }
 	        //calling function to find arbitration winner
 
-	        arbitration_winner = CAN_arbitration(id_messages, no_of_messages);
+	        arbitration_winner = CAN_arbitration(id_messages, no_of_messages, n);
             if(arbitration_winner != 0)
             {
 	            printf("arbitration_winner : 0x%X", arbitration_winner);
